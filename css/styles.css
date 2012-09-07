@@ -16,6 +16,7 @@ font-family: ''
 3D2925 - Brown
 
 */
+
 /* Utility Styles ------------------------------------------------------------ */
 
 ::selection { background: #9B140A; color: white; } /* Safari */
@@ -48,13 +49,15 @@ h1, h2{
 /* ! Layout for desktop version   */
 /* ============================== */
 
-	body {
-		background:url(../images/main_bg.jpg) repeat;
-	}
+	body { background:url(../images/main_bg.jpg) repeat; color:#444; font-family: 'Special Elite', cursive; letter-spacing: 1px; }
 
 	.plaid{
-		background:url(../images/plaid.jpg) repeat;
-	}
+		background:url(../images/musicians_bg.jpg) no-repeat center #000; position: relative;}
+
+	#topTag{ background: #000; height:auto; padding:0px 16px; -moz-border-bottom-right-radius:8px; -moz-border-bottom-left-radius:8px; -webkit-border-bottom-right-radius:8px; -webkit-border-bottom-left-radius:8px; border-bottom-right-radius:8px; border-bottom-left-radius:8px;   }
+	#topTag a:link, #topTag a:visited{ color:#FFF; float:right; display:inline;text-decoration: none; padding-left:25px; margin:10px 0 10px 20px;}
+	#topTag .phone{background:url(../images/icon_bell.jpg) no-repeat left;}
+	#topTag .email{background:url(../images/icon_envelope.jpg) no-repeat left;}
 
 	.logo{
 		margin:0 auto;
@@ -65,7 +68,7 @@ h1, h2{
 		padding:20px 0;
 	}
 	
-	.black{
+	.main_nav{
 		background:#000;
 		margin-bottom:40px;
 	}
@@ -109,11 +112,6 @@ h1, h2{
 	#navigation ul li a:hover {
 	   background:#272822;
 	   color:#fff;
-	   /*
-	   -moz-box-shadow:    inset 0 0 10px #000000;
-   	   -webkit-box-shadow: inset 0 0 10px #000000;
-   	   box-shadow:         inset 0 0 10px #000000;
-   	   */
 	}
 	#navigation ul li a.active,
 	#navigation ul li a.active:hover {
@@ -126,12 +124,39 @@ h1, h2{
 		color:#FFF;
 	} 
 
-	.container.menu {
+	.slidingDiv { height:auto;background:url(../images/plaid2.jpg) repeat #000; padding:40px; margin-top:10px; border-bottom:5px solid #9B140A; display: none; }
+	.slidingDiv img { border:5px solid #FFF; }
+	.slidingDiv h2{ color:#FFF; margin-bottom:20px; }
+	.slidingDiv { color:#FFF; line-height: 1.3em;}
+	.slidingDiv a{ color:#9B140A; text-decoration: none; }
+
+
+
+
+	.wrapper{}
+	.wrapper.menu {
 		background:url(../images/boxer.jpg), url(../images/boxer.jpg);
 		background-repeat:no-repeat, no-repeat;
 		background-position: center left, bottom right;
+		text-shadow:-1px -1px 0 #FFF;
 	}
 
+	.wrapper.menu section{ margin-bottom:20px; padding-bottom:20px; }
+	.wrapper.menu section h2 { margin-bottom:10px; }
+	.menu_item {}
+	.wrapper.menu section h3 { margin-top:15px; font-weight:100; color:#333; }
+	.wrapper.menu section p{ display: block; margin-top:5px; line-height: 1.3em; }
+	.wrapper.menu section span{ color:#9B140A; display: block; margin:10px 0 25px; }
+
+
+
+	footer{ background:url(../images/plaid2.jpg) repeat #000; min-height: 400px; padding-top:60px; }
+	footer h2{ color:#FFF; font-size: 36px; margin-bottom:20px; }
+	footer h3{ color:#961309; font-weight: 100; margin-bottom:20px;}
+	footer .footercol1{ float:left;}
+	footer .footercol2{ float:left; margin-left:80px;}
+	footer ul { margin-bottom:40px; }
+	footer ul li { list-style: none; background:url(../images/icon_star.png) no-repeat left; padding-left:30px; color:#FFF; font-weight: 100; margin-bottom:10px;}
 
 
 /* ============================= */
@@ -146,6 +171,9 @@ h1, h2{
 	#navigation ul li a{
 		font-size: 14px;
 	}
+
+	footer h2{ font-size: 24px; margin-bottom:20px; }
+
 
 }
 
@@ -162,6 +190,9 @@ h1, h2{
 	body {
 		
 	}
+	#navigation ul li {width:100%;}
+	footer{ text-align: center; }
+	footer .footercol2 { margin-left:0px;}
 
 }
 
