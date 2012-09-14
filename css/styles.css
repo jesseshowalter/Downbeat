@@ -32,6 +32,9 @@ height: 0;
 * html .group { zoom: 1; } /* IE6 */
 *:first-child+html .group { zoom: 1; } /* IE7 */
 
+.instagram {  }
+.instagram-image { width: 100%; max-width:360px; margin-bottom:20px; }
+.instagram-placeholder { }
 
 
 /* Fonts Styles ------------------------------------------------------------ */
@@ -55,13 +58,12 @@ h1, h2{
 		background:url(../images/musicians_bg.jpg) no-repeat center #000; position: relative;}
 
 	#topTag{ background: #000; height:auto; padding:0px 16px; -moz-border-bottom-right-radius:8px; -moz-border-bottom-left-radius:8px; -webkit-border-bottom-right-radius:8px; -webkit-border-bottom-left-radius:8px; border-bottom-right-radius:8px; border-bottom-left-radius:8px;   }
-	#topTag a:link, #topTag a:visited{ color:#FFF; float:right; display:inline;text-decoration: none; padding-left:25px; margin:10px 0 10px 20px;}
-	#topTag a:hover { color:#9B140A;}
+	#topTag a:link, #topTag a:visited{ color:#FFF; float:right; display:inline;text-decoration: none; padding-left:25px; margin:10px 0 10px 20px; height:16px;
+		-moz-transition: all .3s ease-in-out; -webkit-transition: all .3s ease-in-out; transition: all .3s ease-in-out;}
+	#topTag a:hover { color:#9B140A; background-position: 0 -19px}
 	#topTag a:active { color:#FFF;}
-	#topTag .phone { background:url(../images/icon_bell.jpg) no-repeat left;}
-	#topTag .email { background:url(../images/icon_envelope.jpg) no-repeat left;}
-	#topTag .facebook { background:url(../images/icon_facebook.jpg) no-repeat left;}
-	#topTag .twitter { background:url(../images/icon_twitter.jpg) no-repeat left;}
+	#topTag .phone { background: #000 url(../images/icon_bell.jpg) no-repeat 0 0; }
+	#topTag .email { background:url(../images/icon_envelope.jpg) no-repeat 0 0;}
 
 	.logo{
 		margin:0 auto;
@@ -75,6 +77,7 @@ h1, h2{
 	.main_nav{
 		background:#000;
 		margin-bottom:40px;
+		border-bottom:3px solid #9B140A;
 	}
 
 	#navigation {
@@ -106,48 +109,36 @@ h1, h2{
 	   position:relative;
 	   right:50%;
 	}
-	#navigation ul li a {
+	#navigation ul li a:link, #navigation ul li a:visited {
 	   display:block;
 	   color:#FFF;
 	   margin:0 0 0 1px;
-	   padding:15px 15px 15px 30px;
+	   padding:15px 30px;
 	   text-decoration:none;
 	   line-height:1.3em;
 	   background:url(../images/navi.jpg) no-repeat;
 	   background-position: 0 55px;
-	   -moz-transition: all .4s ease-in-out;
-	   -webkit-transition: all .4s ease-in-out;
-	   transition: all .4s ease-in-out;
-	}
-	#navigation ul li a:hover {
-	   color:#FFF;
-	   background-position: 0 0;
-	}
-	#navigation ul li a.active,
-	#navigation ul li a.active:hover {
-	   color:#fff;
-	   background:#000;
-	   font-weight:bold;
+	   -moz-transition: all .3s ease-in-out;
+	   -webkit-transition: all .3s ease-in-out;
+	   transition: all .3s ease-in-out;
 	}
 
-	#navigation ul li a:visited{
-		color:#FFF;
-	} 
+	#navigation ul li a:hover {color:#9B140A;background-position: 0 15px; }
+	#navigation ul li a.active{ color:#fff; background:#000; font-weight:bold;}
+
+	#twitterFeed{ background:#9B140A; height:40px;}
 
 	.slidingDiv { height:auto;background:url(../images/plaid2.jpg) repeat #000; padding:40px; margin-top:10px; border-bottom:5px solid #9B140A; display: none; }
 	.slidingDiv img { border:5px solid #FFF; }
-	.slidingDiv h2{ color:#FFF; margin-bottom:20px; }
+	.slidingDiv h2{ color:#FFF; margin-bottom:20px; line-height: 1.2em; }
 	.slidingDiv { color:#FFF; line-height: 1.3em;}
 	.slidingDiv a{ color:#9B140A; text-decoration: none; }
 
-
-
-
 	.wrapper{}
 	.wrapper.menu {
-		background:url(../images/boxer.jpg), url(../images/boxer.jpg);
-		background-repeat:no-repeat, no-repeat;
-		background-position: center left, bottom right;
+		background:url(../images/bg_boxer.jpg), url(../images/bg_guitar.jpg), url(../images/bg_trumpet.jpg);
+		background-repeat:no-repeat, no-repeat, no-repeat;
+		background-position: center left, top right, bottom right;
 		text-shadow:-1px -1px 0 #FFF;
 	}
 
@@ -169,41 +160,55 @@ h1, h2{
 
 
 	footer{ background:url(../images/plaid2.jpg) repeat #000; min-height: 400px; padding-top:60px; }
-	footer h2{ color:#FFF; font-size: 36px; margin-bottom:20px; }
+	footer h2{ color:#FFF; font-size: 36px; margin-bottom:20px; line-height: 1.2em; }
 	footer h3{ color:#961309; font-weight: 100; margin-bottom:20px;}
 	footer .footercol1{ float:left;}
-	footer .footercol2{ float:left; margin-left:80px;}
+	footer .footercol2{ float:left;}
 	footer ul { margin-bottom:40px; }
-	footer ul li { list-style: none; background:url(../images/icon_star.png) no-repeat left; padding-left:30px; color:#FFF; font-weight: 100; margin-bottom:10px;}
+	footer ul li { color:#FFF; font-weight: 100; margin-bottom:5px;}
+
+	.DBD_map{  background: #FFFFFF; border: 1px solid #91140A; padding: 12px; width:98%; height:300px; }
+
+	/* Social Media Styles */
+	#social_container{ float:left; padding:8px;}
+	.twitter-share-button{ float:left; width:90px !important; }
+
+
+
+
+/* ============================= */
+/* ! Layout for 2 Column Nav early switch  */
+/* ============================= */
+@media handheld, only screen and (max-width: 940px) {
+
+	#navigation ul li {width:50%;}
+	#navigation ul li a{font-size: 14px; }
+
+}
 
 
 /* ============================= */
 /* ! Layout for Tablet version   */
 /* ============================= */
-@media handheld, only screen and (max-width: 1000px) {
+@media handheld, only screen and (max-width: 767px) {
 
 	body {
 		
 	}
-
-	#navigation ul li a{
-		font-size: 14px;
-	}
-
+	#navigation ul li {width:50%;}
+	#navigation ul li a{font-size: 14px; }
+	footer{ text-align: center; }
 	footer h2{ font-size: 24px; margin-bottom:20px; }
 
 
 }
 
 
-
-
-
 /* ============================= */
 /* ! Layout for mobile version   */
 /* ============================= */
 
-@media handheld, only screen and (max-width: 767px) {
+@media handheld, only screen and (max-width: 480px) {
 
 	body {
 		
@@ -211,7 +216,8 @@ h1, h2{
 	#navigation ul li {width:100%;}
 	footer{ text-align: center; }
 	footer .footercol2 { margin-left:0px;}
-	#topTag a:link, #topTag a:visited{ text-indent: -9999px;}
+	#topTag a:link, #topTag a:visited{ text-indent: -9999px; margin-left: 0 !important;}
+	#topTag .email { display:none !important;}
 
 }
 
