@@ -19,65 +19,12 @@
 	
 	<!-- Your styles -->
 	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/tabs.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />
 	<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
 	<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
-	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="js/showHide.js" type="text/javascript"></script>
-
-	<script type="text/javascript">
-
-	$(document).ready(function(){
-
-
-	   $('.show_hide').showHide({			 
-			speed: 300,  // speed you want the toggle to happen	
-			easing: '',  // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
-			changeText: 0, // if you dont want the button text to change, set this to 0
-			showText: 'View',// the button text to show when a div is closed
-			hideText: 'Close' // the button text to show when a div is open
-						 
-		}); 
-
-
-	});
-
-	</script>
-	<script>
-
-	//HELP FROM HERE...
-	//https://forrst.com/posts/Using_the_Instagram_API-ti5
-
-	// small = + data.data[i].images.thumbnail.url +
-	// resolution: low_resolution, thumbnail, standard_resolution
-
-	$(function() {
-	    $.ajax({
-	    	type: "GET",
-	        dataType: "jsonp",
-	        cache: false,
-	        url: "https://api.instagram.com/v1/users/2263372/media/recent/?access_token=18360510.f59def8.d8d77acfa353492e8842597295028fd3",
-	        success: function(data) {
-	            for (var i = 0; i < 1; i++) {
-	        $(".instagram").append("<div class='instagram-placeholder'><a target='_blank' href='" + data.data[i].link +"'><img class='instagram-image' src='" + data.data[i].images.low_resolution.url +"' /></a></div>");   
-	      		}     
-	                            
-	        }
-	    });
-	});
-
-	</script>
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+	<link href="css/jquery.tweet.css" rel="stylesheet"/>
 </head>
-
 <body>
 <div class="conatiner plaid">
 	<section id="topTag" class="group">
@@ -85,7 +32,7 @@
 			<div class="onecol"></div>
 			<div class="tencol">
 				<a href="tel:+440000000000" class="phone">808-888-8888</a>
-				<a href="" class="email">Email Us</a>
+				<a href="#" class="email">Email Us</a>
 				<div id="social_container">
 					<a href="https://twitter.com/share" class="twitter-share-button" data-via="downbeathawaii" data-hashtags="downbeatdiner">Tweet</a>
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -151,13 +98,50 @@
 	<div class="slidingDiv toggleDiv" id="Blog">
 		<div class="row">
 			<div class="onecol"></div>
-			<div class="fourcol">
-				<img src="images/outside.jpg" alt=""/>
-			</div>
-			<div class="sixcol">
+			<div class="tencol">
 				<h2>Our Blog</h2>
-				<p>Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-				<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+				<div id="tabs">
+		    		<ul>
+		        		<li><a href="#fragment-1">1</a></li>
+		        		<li><a href="#fragment-2">2</a></li>
+		        		<li><a href="#fragment-3">3</a></li>
+		        		<li><a href="#fragment-4">4</a></li>
+		    	   </ul>
+			
+		        	<div id="fragment-1" class="ui-tabs-panel">
+		        		<article>
+		        			<h3>The Downbeat gets a new look</h3>
+		        			<time>January 20th, 2012</time>
+	        	    		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p> 
+	        	    		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+	        	    	</article>
+		        	</div>
+		        	
+		        	<div id="fragment-2" class="ui-tabs-panel ui-tabs-hide">
+		        		<article>
+	                    	<h3>Downbeat Diner Featured on KITV</h3>
+		        			<time>January 20th, 2012</time>
+	        	    		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p> 
+	        	    	</article>
+		            </div>
+		            
+		        	<div id="fragment-3" class="ui-tabs-panel ui-tabs-hide">
+		        		<article>
+	            			<h3>How we change our city</h3>
+		        			<time>January 20th, 2012</time>
+	        	    		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Pellentesque habitant <img src="images/outside.jpg"> morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+	        	    		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+	        	    	</article>
+		            </div>
+		        
+		        	<div id="fragment-4" class="ui-tabs-panel ui-tabs-hide">
+		        		<article>
+	        				<h3>Defend Otto</h3>
+		        			<time>January 20th, 2012</time>
+	        	    		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p> 
+	        	    	</article>
+		        	</div>
+		        </div>
 				<a href="#" class="show_hide">Close</a>
 			</div>
 			<div class="onecol"></div>
@@ -167,19 +151,9 @@
 	<div class="slidingDiv toggleDiv" id="Contact">
 		<div class="row">
 			<div class="onecol"></div>
-			<div class="fourcol">
-				<img src="images/owners.jpg" alt=""/>
-			</div>
-			<div class="sixcol">
+			<div class="tencol">
 				<h2>Contact Us</h2>
-				<script type="text/javascript">
-				var __machform_url = 'http://jesseshowalter.com/machform/embed.php?id=15455';
-				var __machform_height = 772;
-				</script>
-				<div id="mf_placeholder"></div>
-				<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-				<script type="text/javascript" src="http://jesseshowalter.com/machform/js/jquery.ba-postmessage.min.js"></script>
-				<script type="text/javascript" src="http://jesseshowalter.com/machform/js/machform_loader.js"></script>
+				<iframe height="572" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none" src="http://www.jesseshowalter.com/machform/embed.php?id=15455" title="DBD - Downbeat Diner Contact Form"><a href="http://www.jesseshowalter.com/machform/view.php?id=15455" title="DBD - Downbeat Diner Contact Form">DBD - Downbeat Diner Contact Form</a></iframe>
 				<a href="#" class="show_hide">Close</a>
 			</div>
 			<div class="onecol"></div>
@@ -390,10 +364,11 @@
 		<div class="row">
 			<div class="onecol"></div>
 			<div class="fourcol">
-				<div class="instagram group"></div>
+				<h2>Our Tweets</h2>
+				<div class='tweet query'></div>
 			</div>
 			<div class="sixcol">
-				<h2>The Downbeat</h2>
+				<h2>Downbeat Details</h2>
 				<section class="sevencol">
 					<article>
 						<h3>Is Located At:</h3>
@@ -430,6 +405,48 @@
 			<div class="onecol"></div>
 		</div>
 	</footer>
+	<div class="wrapper copyright">
+		<div class="row">
+			<div class="onecol"></div>
+			<div class="fivecol">
+				<p>Copyright Downbeat Diner &amp; Lounge 2012</p>
+			</div>
+			<div class="fivecol pullright">
+				<a class="mark" href="#">JSD</a>
+			</div>
+			<div class="onecol"></div>
+		</div>
+	</div>
 </div>
+	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="js/showHide.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.7.custom.min.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+ 	<script src="js/jquery.tweet.js" charset="utf-8"></script>
+	<script type="text/javascript">
+	jQuery(function($){
+		$(".tweet").tweet({
+	      join_text: "auto",
+	      username: "downbeathawaii",
+	      avatar_size: 40,
+	      count: 2,
+	      auto_join_text_default: " ",
+	      auto_join_text_ed: "  ",
+	      auto_join_text_ing: " ",
+	      auto_join_text_reply: " ",
+	      auto_join_text_url: "  ",
+	      loading_text: "Downbeat Rocks..."
+	    	});
+		  });
+	</script>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>
