@@ -82,7 +82,7 @@ h1, h2{
 	.main_nav{
 		background:#000;
 		margin-bottom:40px;
-		border-bottom:3px solid #9B140A;
+		/*border-bottom:3px solid #9B140A;*/
 	}
 
 	#navigation {
@@ -181,7 +181,7 @@ h1, h2{
 	.DBD_map{  background: #FFFFFF; border: 1px solid #91140A; padding: 12px; width:98%; height:300px; }
 
 	/* Social Media Styles */
-	#social_container{ float:left; padding:8px;}
+	#social_container{ float:left; padding:8px; width:200px;}
 	.twitter-share-button{ float:left; width:90px !important; }
 
 	.menuArea{ text-align: center; margin-bottom:40px; }
