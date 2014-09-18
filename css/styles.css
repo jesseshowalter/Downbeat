@@ -239,6 +239,7 @@ h1, h2{
 	#navigation ul li {width:100%;}
 	footer{ text-align: center; }
 	footer .footercol2 { margin-left:0px;}
+	#topTag{display:none;}
 	#topTag a:link, #topTag a:visited{ text-indent: -9999px; margin-left: 0 !important;}
 	#topTag .email { display:none !important;}
 
